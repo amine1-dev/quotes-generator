@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const randomQuote = getRandomQuote();
         const [quote, author] = randomQuote.split(' –');
         quoteText.textContent = quote;
-        authorText.textContent = `- ${author}`;
+        authorText.textContent = `author is ${author}`;
     }
 
     newQuoteButton.addEventListener('click', displayNewQuote);
