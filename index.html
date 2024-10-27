@@ -3,49 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Qoutes Generator</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Quotes Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
     <link
       href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lobster&family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <header>
-      <div class="amin">
-        <img src="https://img.icons8.com/?size=100&id=u9FsArgkwryt&format=png&color=000000" alt="book" style="height: 84px; width: 84px;">
+  <body class="h-screen bg-[url('back.jpeg')] bg-cover  font-sans flex flex-col items-center min-h-screen">
+   
+    <header class="flex items-center justify-center bg-blue-600 rounded-[25px] w-full max-w-[700px] mx-auto py-4 space-x-4 px-4 md:px-6 lg:px-8">
+     
+      <div class="flex justify-center">
+        <img src="https://img.icons8.com/?size=100&id=u9FsArgkwryt&format=png&color=000000" 
+             alt="book" class="h-20 w-20" />
       </div>
-      <div class="wise">
-        <h2>BY WISER</h2>
+      <div class="text-center">
+        <h2 class="text-3xl font-Dancing Script tracking-wide text-gray-800">BY WISER</h2>
       </div>
     </header>
-    <div class="word">
-      <h2>"DONT JUST READ THEM , USE THEM"</h2>
-    </div>
-    <div class="container">
-      <div id="copy-card" class="copy-card">Quote Copied!</div>
-      <div class="quote">
-        <q id="quote">
-          the life is not gonna give you all you want , the life is will give
-          you what you worth trust the process even if it take too much of
-          times
-        </q>
-      </div>
-      <div class="author">
-        <p id="author">- Steve Jobs</p>
-      </div>
-      <div class="buttons">
-        <button id="new-quote">New Quote</button>
 
-        <button id="copy-quote">Copy Quote</button>
-        <script src="generate.js"></script>
-      </div>
+    
+    <main class="flex flex-col items-center w-full max-w-md px-4">
       
-    </div>
+      <div class="mt-6">
+        <h2 class="text-center text-xl font-Lobster font-normal text-gray-600">
+          "DONT JUST READ THEM, USE THEM"
+          
+        </h2>
+        <h2 class="font-Noto Kufi Arabic font-bold text-xl text-gray-700">"الحياة عبارة عن رحلة، وليست وجهة"</h2>
+      </div>
 
-  <script src="copyquote.js"></script>
+      
+      <div class="relative w-full mt-8">
+        <div
+          id="copy-card"
+          class="absolute top-0 left-1/2 transform -translate-x-1/2 bg-green-200 text-green-800 font-semibold rounded-md p-2 hidden"
+        >
+          Quote Copied!
+        </div>
+
+        <div class="bg-white shadow-lg rounded-[30px] p-6 mt-4 text-center">
+          <q
+            id="quote"
+            class="text-lg font-light text-gray-900 block leading-relaxed"
+          >
+            "the life is not gonna give you all you want, the life will give you
+            what you worth. Trust the process even if it takes too much time."
+          </q>
+          <p id="author" class="mt-4 text-right text-gray-500 font-semibold">
+            - Steve Jobs
+          </p>
+        </div>
+      </div>
+
+      
+      <div class="flex justify-center space-x-4 mt-6 w-200 font-sans">
+        <button
+          id="new-quote"
+          class="bg-blue-700 hover:bg-blue-300 hover:text-gray-800 text-white py-2 px-4 rounded-[30px]  transition duration-200"
+        >
+          New Quote
+        </button>
+        <button
+          id="copy-quote"
+          class="bg-orange-700 hover:bg-orange-300 hover:text-gray-800 text-white py-2 px-4 rounded-[30px]  transition duration-200"
+        >
+          Copy Quote
+        </button>
+      </div>
+    </main>
+
+    <script src="generate.js"></script>
+    <script src="copyquote.js"></script>
+
+  
   </body>
- 
 </html>
